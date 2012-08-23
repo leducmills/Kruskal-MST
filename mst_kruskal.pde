@@ -26,7 +26,7 @@ void setup() {
   nav=new Nav3D();
   size(800, 800, P3D);
 
-  maximumVertices = int(random(100));
+  maximumVertices = int(random(500));
   g = new Graph(maximumVertices);
   vertices = new ArrayList();
 
@@ -109,14 +109,14 @@ public void newKruskal() {
   
   println("n");
   
-  maximumVertices = int(random(100));
+  maximumVertices = int(random(500));
   g = new Graph(maximumVertices);
   vertices = new ArrayList();
 
   for (int i=0; i<maximumVertices; i++) {
     x = random(width);
     y = random(height);
-    z = random(50); 
+    z = random(100); 
 
     g.addVertex(i, x, y, z);
     vertices.add(new Vec3D(x, y, z));
@@ -128,7 +128,7 @@ public void newKruskal() {
       if(k != j) { 
       g.addEdge(j,k);
       }
-      println(j + " " + k);
+      //println(j + " " + k);
      } 
     }
 
